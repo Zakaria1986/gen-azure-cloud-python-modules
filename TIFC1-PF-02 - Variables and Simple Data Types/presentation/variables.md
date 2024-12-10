@@ -4,10 +4,20 @@
 ## Learning Objectives
 
 - Explain what a variable is and why they’re used
+    - Variable are like placeholder for datatypes which then can be called by the variable name, just like the humans, we have names which identifies us. 
 - Be able to identify a number of variable types
+    - String
+    - data
+    - Objects
+    - Arrays
+    - NAN Undefined
 - Select the appropriate variable type for a given scenario
+    -
 - Store and recall data using a variable
-  
+
+    -  name = zakaria
+    - print name
+
 ---
 
 ## I have a cat named Noche
