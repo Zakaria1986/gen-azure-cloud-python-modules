@@ -44,3 +44,5 @@ print(itemPrice*2)
 print(round((itemPrice*itemPrice)/2))
   
 # 6. Store your favorite number in a variable. Then, using that variable, create a message that reveals your favorite number. Print that message.
+
+print(f"My favourite number is {itemPrice}")
