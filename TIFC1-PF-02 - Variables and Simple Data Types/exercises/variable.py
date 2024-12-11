@@ -42,6 +42,10 @@ print((itemPrice*3)  - priceDcrease )
 print(itemPrice*2)
 # division
 print(round((itemPrice*itemPrice)/2))
+# squireroot
+print(round((itemPrice-2)**3))
+
+
   
 # 6. Store your favorite number in a variable. Then, using that variable, create a message that reveals your favorite number. Print that message.
 
