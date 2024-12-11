@@ -97,7 +97,7 @@ print('\nTotal number of guest:', total_num_of_guest)
 for name in dinner_invites_to_deceased:
    if len(dinner_invites_to_deceased) > 2:  
        name_popped = dinner_invites_to_deceased.pop(dinner_invites_to_deceased.index(name))
-       print('\nHi, i\'m really you cannot be invited to the dinner:', name_popped)
+       print('\nHi, i\'m really sorry, you are not be invited to the dinner:', name_popped)
 
 # still invited
 for name in dinner_invites_to_deceased:
