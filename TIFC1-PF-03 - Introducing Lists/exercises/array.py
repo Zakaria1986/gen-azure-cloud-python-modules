@@ -1,3 +1,9 @@
+import pyautogui as alert
+import pygetwindow as gw
+import tkinter as tk
+from tkinter import messagebox
+
+
 # List of favorite music artists
 names = ["Adele", "Ed Sheeran", "Beyoncé", "Drake", "Taylor Swift"]
 
@@ -31,7 +37,6 @@ print(f' “\nMy favorite book is {favorite_movies[0]} directed by {favorite_mov
 
 
 ### 4. If you could invite anyone, living or deceased, to dinner, who would you invite?
-
 dinner_invites_to_deceased = [
     "Albert Einstein", 
     "Maya Angelou", 
@@ -39,7 +44,6 @@ dinner_invites_to_deceased = [
 ]
 
 print(
-   
    "People I would invite to dinner: {}".format(dinner_invites_to_deceased[0]), 
    "\nPeople I would invite to dinner: {}".format(dinner_invites_to_deceased[1]),  
    "\nPeople I would invite to dinner: {}".format(dinner_invites_to_deceased[2]),    
@@ -54,16 +58,59 @@ print('\n We have one less guest in the list now:',dinner_invites_to_deceased);
 
 # Inviting next favourite person to the dinner using method insert(1)
 new_guest_name = 'Nelson Mandela'
-dinner_invites_to_deceased.insert(1,new_guest_name)
+dinner_invites_to_deceased.insert(0,new_guest_name)
+middle_index = len(dinner_invites_to_deceased) // 2
+dinner_invites_to_deceased.insert(middle_index ,'Name seating in the middle')
 print('\n We have one less guest in the list now:',dinner_invites_to_deceased); 
 
+# Found bigger table message
+print('\nFound a bigger dinner table, Invite more please')
+def show_alert():
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+    messagebox.showinfo("Alert", "Found a bigger dinner table, Invite more please!")
+    root.destroy()
+# Call the function to show the alert
+show_alert()
 
-# Inviting 3 more guests, now using promt to add guest names
-
+# Inviting 3 more guests, now using promt to add guest names: input() 
 add_guest_to_invite_list = input('\nIf you wish to invite more guest, please entern guest name: ')
 print('\n Guest name you have entered: '+add_guest_to_invite_list)
 
 # Add to the list .append()
-
-dinner_invites_to_deceased.append(add_guest_to_invite_list)
+if len(add_guest_to_invite_list) > 0:
+    dinner_invites_to_deceased.append(add_guest_to_invite_list)
+    
 print('\nYour guest name has been added to the invite list: ', dinner_invites_to_deceased)
+
+for name in dinner_invites_to_deceased:
+ print("\nPeople I would invite to dinner: {}".format(name))
+ 
+ 
+# Can only invite 2 people for dinner now
+print('\nOpp! I can only invite 2 people for dinner now.')
+
+total_num_of_guest = len(dinner_invites_to_deceased)
+print('\nTotal number of guest:', total_num_of_guest)
+
+# popping out the name from the list
+for name in dinner_invites_to_deceased:
+   if len(dinner_invites_to_deceased) > 2:  
+       name_popped = dinner_invites_to_deceased.pop(dinner_invites_to_deceased.index(name))
+       print('\nHi, i\'m really you cannot be invited to the dinner:', name_popped)
+
+# still invited
+for name in dinner_invites_to_deceased:
+    print('\nHi, are still invited:', name) 
+
+
+for name in dinner_invites_to_deceased:
+     # Deleting the last two
+    del dinner_invites_to_deceased[dinner_invites_to_deceased.index(name)]
+
+# Empty list
+print('\nHi, Empty Array:', dinner_invites_to_deceased.clear())
+    
+    
+    
+    
