@@ -65,13 +65,14 @@ print('\n We have one less guest in the list now:',dinner_invites_to_deceased);
 
 # Found bigger table message
 print('\nFound a bigger dinner table, Invite more please')
-def show_alert():
-    root = tk.Tk()
-    root.withdraw()  # Hide the main window
-    messagebox.showinfo("Alert", "Found a bigger dinner table, Invite more please!")
-    root.destroy()
-# Call the function to show the alert
-show_alert()
+# def show_alert():
+#     root = tk.Tk()
+#     root.withdraw()  # Hide the main window
+#     messagebox.showinfo("Alert", "Found a bigger dinner table, Invite more please!")
+#     root.destroy()
+    
+# # Call the function to show the alert
+# show_alert()
 
 # Inviting 3 more guests, now using promt to add guest names: input() 
 add_guest_to_invite_list = input('\nIf you wish to invite more guest, please entern guest name: ')
@@ -107,10 +108,24 @@ for name in dinner_invites_to_deceased:
 for name in dinner_invites_to_deceased:
      # Deleting the last two
     del dinner_invites_to_deceased[dinner_invites_to_deceased.index(name)]
+    
 
 # Empty list
 print('\nHi, Empty Array:', dinner_invites_to_deceased.clear())
     
     
-    
-    
+### 5. Think of at least five places in the world you’d like to visit. Follow the steps to build your program:     
+top_five_places = ["Tokyo", "Paris", "New York", "Sydney", "Rio de Janeiro"]
+print("\nTop five place for holiday destination",top_five_places); 
+
+# Sorting list in alphabetical order
+top_five_places_in_alphabetical_order = sorted(top_five_places) 
+print('\nTop five place for holiday destination in alphabedical order: ',top_five_places_in_alphabetical_order)
+
+top_five_places_in_alphabetical_order = sorted(top_five_places_in_alphabetical_order, reverse=True) 
+print('\nTop five place for holiday destination in alphabedical order: but reversed: ',top_five_places_in_alphabetical_order)
+
+# Reversing it back into its orginal order
+top_five_places_in_alphabetical_order = top_five_places_in_alphabetical_order[::-1];  
+print('\nTop five place for holiday destination in alphabedical order in its orginal order: ',top_five_places_in_alphabetical_order)
+
