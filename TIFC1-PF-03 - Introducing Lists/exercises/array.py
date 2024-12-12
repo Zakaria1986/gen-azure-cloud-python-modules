@@ -113,7 +113,7 @@ for name in dinner_invites_to_deceased:
 # Empty list
 print('\nHi, Empty Array:', dinner_invites_to_deceased.clear())
     
-    
+  
 ### 5. Think of at least five places in the world you’d like to visit. Follow the steps to build your program:     
 top_five_places = ["Tokyo", "Paris", "New York", "Sydney", "Rio de Janeiro"]
 print("\nTop five place for holiday destination",top_five_places); 
@@ -128,4 +128,16 @@ print('\nTop five place for holiday destination in alphabedical order: but rever
 # Reversing it back into its orginal order
 top_five_places_in_alphabetical_order = top_five_places_in_alphabetical_order[::-1];  
 print('\nTop five place for holiday destination in alphabedical order in its orginal order: ',top_five_places_in_alphabetical_order)
+
+# 6. Think of something you could store in a list. For example, mountains, rivers, countries, cities, languages, food, cars, anything you’d like.
+list_of_random_things = list(); 
+list_of_random_things.append('Bangladesh')
+list_of_random_things.append('America')
+list_of_random_things.append('Englad')
+list_of_random_things.append('Animals')
+list_of_random_things.insert(3,'Car')
+# Replaces the item in Zoro index with Air Plane
+list_of_random_things[0]= 'Air Plane'
+arr_sorted = sorted(list_of_random_things[::-1])
+print(arr_sorted)
 
