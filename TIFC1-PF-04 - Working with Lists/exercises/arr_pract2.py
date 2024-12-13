@@ -1,3 +1,4 @@
+import random
 # Exercise 4: Working with Lists
 
 favorite_pizzas = ["Margherita", "Pepperoni", "BBQ Chicken"]
@@ -16,8 +17,34 @@ print ('\n{} {} {}'.format(i_love_pizza_string, i_love_pizza_string2,i_love_pizz
 # 2.
 # List of animals with common characteristics
 animals = ["Dolphin", "Elephant", "Chimpanzee"]
-
+#
 for pet in animals:
     print(f'\n{pet.title()} would make a great pet.')
-
     
+# what these animals have in common
+print('They are all very highly intelligent and social animals.')
+
+# 3.  
+
+# Use a for loop to print the numbers from 1 to 20, inclusive.
+num = 20
+for i in range(num):
+    print('\n1st Num example:',i+1); 
+
+# example 2 of printing numbers one 2 20
+for num1 in range(1,20):
+    print('\nNum',num1); 
+    
+# 4.  
+#arr_num_list = [random.randint(1,100) for i in range(1,100)]
+arr_num_list = [ ]
+for num in (random.randint(1,100) for i in range(1,100)):
+    arr_num_list.append(num); 
+    
+print(arr_num_list)
+
+# Getting the min and max
+min = min(arr_num_list)
+max = max(arr_num_list)
+print('\nmin num:',min,'Max num:', max)
+
