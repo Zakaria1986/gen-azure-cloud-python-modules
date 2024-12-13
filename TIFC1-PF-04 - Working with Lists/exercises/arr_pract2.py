@@ -32,16 +32,16 @@ for i in range(num):
     print('\n1st Num example:',i+1); 
 
 # example 2 of printing numbers one 2 20
-for num1 in range(1,20):
-    print('\nNum',num1); 
+for num1 in range(1,21):
+    print('\nNum',num1,'\n'); 
     
 # 4.  
     # Generating list of number from 1 to 100 randomly
 #arr_num_list = [random.randint(1,100) for i in range(1,100)]
 arr_num_list = [ ]
 for num in (random.randint(1,100) for i in range(1,100)):
-    arr_num_list.append(num);
-     
+    arr_num_list.append(num)
+      
 # Printig the list    
 print(arr_num_list)
 
@@ -60,4 +60,6 @@ for num in range(3,100,3):
     
 # Printing out the 3 increments   
 print('\n',arr_three_times_list)
+
+# 5.
 
