@@ -14,5 +14,10 @@ i_love_pizza_string3 = 'I confirm i really Enjoy automating expressing my love f
 print ('\n{} {} {}'.format(i_love_pizza_string, i_love_pizza_string2,i_love_pizza_string3))   
 
 # 2.
+# List of animals with common characteristics
+animals = ["Dolphin", "Elephant", "Chimpanzee"]
+
+for pet in animals:
+    print(f'\n{pet.title()} would make a great pet.')
 
     
