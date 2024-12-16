@@ -67,18 +67,42 @@ pizza = pizza_menu
 margherita_properties = len(pizza)
 print('total number of pizza in the Dictionary', margherita_properties) 
 #print(pizza)
+
+pizza_name = ''
 for piz in pizza:
    # print('\n',piz)
-    for key, val in piz.items():
-        print(f'Pizza name: {key},', 'Size {},'.format(val['size']), 'Price: £',val['price'], ',Toopings {}.'.format(val['toppings']),)
-
-# keys = pizza.keys()
-# values = pizza.values()
-
-# print('Keys', keys)
-
-# for key, val in pizza.items():
-#     if key == str('Margarita'):
-#         print('Pizza name: {}'.format( val['name']))
+   
+    output = ''
+    toppins = ''
+    for key, val in piz.items():  
+        # output += f'Pizza name: {val['name']},', 'Size {},'.format(val['size']), 'Price: £',val['price'], ',Toppings: {}.'.format(toppins)
+        output += f'Pizza name: {val['name']}, \nSize: {val['size']},\nPrice: £{val['price']},\nToppings:'
+        pizza_name += f' {val['name']},'
+        
+        for index, topins in enumerate(val['toppings']):
+            toppins += f'\n\t{index} = {topins} '  
+    output+=toppins
+    print(output)
     
+   
+# print('\n',pizza_name)
+# promt for pizza options
+select_option_prompt = input(f'\nPlease select the pizza from the following list:{pizza_name}?...')
+
+## write all the else if statements logics here to only vew whats been selected
+
+            
+            
+
+       
+           
+
+
+ 
+
+
+
+
+
+  
 
