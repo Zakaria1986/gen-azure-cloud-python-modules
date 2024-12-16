@@ -61,5 +61,5 @@ for num in range(3,100,3):
 # Printing out the 3 increments   
 print('\n',arr_three_times_list)
 
-# 5.
+# 6. 
 
