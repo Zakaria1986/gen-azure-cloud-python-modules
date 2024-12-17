@@ -52,3 +52,23 @@ pizza_menu = [
  # Based on the input show the properties of that Pizza
  
  # if they want to order the pizza calculate and show the total price and end the program. 
+
+
+
+
+'''
+
+If you are enjoying Python and want to learn more or want another explanation for the topics we have been going over on the course, here is a list of websites that you may find helpful:
+ 
+https://codecombat.com/ - game to learn code
+https://www.codewars.com/collections/basic-python - another fun game to learn coding, I like this one! 
+https://www.pythonclassroom.com/decisions-if-elif-else/if-elif-else - Example problems with solutions and explanations. Really good if you want examples or 'real world' problems and solutions.
+Learn Python Programming - Good tutorials for different topics and some have video explanations
+Python Tutorial - Good tutorials for different Python subjects with examples.
+Python Overview | CodeWithHarry - good explanations
+ 
+Have fun! 
+ 
+Learn programming with a multiplayer live coding strategy game for beginners. Learn Python or JavaScript as you defeat ogres, solve mazes, and level up. Open source HTML5 game!
+
+'''

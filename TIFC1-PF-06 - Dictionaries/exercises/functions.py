@@ -37,8 +37,6 @@ def add_new_pizza(name, price, size, topppings, pizza_menu):
 # def add_new_pizza():
     
 
-
-    
 # Delete a property 
 
 
