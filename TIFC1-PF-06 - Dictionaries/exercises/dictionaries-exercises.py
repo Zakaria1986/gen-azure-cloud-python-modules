@@ -68,10 +68,13 @@ margherita_properties = len(pizza)
 print('total number of pizza in the Dictionary', margherita_properties) 
 #print(pizza)
 
+# String to inlcude inside the input
 pizza_name = ''
+
+# Use it if statement to match the names
+pizza_name_list = list();
 for piz in pizza:
    # print('\n',piz)
-   
     output = ''
     toppins = ''
     for key, val in piz.items():  
@@ -79,15 +82,64 @@ for piz in pizza:
         output += f'Pizza name: {val['name']}, \nSize: {val['size']},\nPrice: £{val['price']},\nToppings:'
         pizza_name += f' {val['name']},'
         
+        list_name = val['name'].strip().lower()
+        pizza_name_list.append(list_name)
+        
         for index, topins in enumerate(val['toppings']):
             toppins += f'\n\t{index} = {topins} '  
     output+=toppins
-    print(output)
-    
-   
+    # print(output)
+     
 # print('\n',pizza_name)
 # promt for pizza options
-select_option_prompt = input(f'\nPlease select the pizza from the following list:{pizza_name}?...')
+
+print('\n',pizza_name_list)
+
+def get_user_selected_pizza(input, pizza_list):
+    ## Use it if statement to match the names
+    output = ''
+    
+    for piz in pizza_list:
+        for key, val in piz.items():  
+            toppins = ''
+            if val['name'].lower() == input:
+                output += f'Pizza name: {val['name']}, \nSize: {val['size']},\nPrice: £{val['price']},\nToppings:'
+                for index, topins in enumerate(val['toppings']):
+                    toppins += f'\n\t{index} = {topins} ' 
+        output+=toppins
+    return output; 
+        
+       
+# check for correct entry or otherwise ask for the correct entry
+while True:
+    select_option_prompt = input(f'\nPlease select the pizza from the following list:"{pizza_name}"?')
+    input_entry_to_lower = select_option_prompt.lower()
+    choice = input_entry_to_lower.strip()
+    
+    if choice == 'exit':
+        break  
+    elif not choice.isalpha() or choice not in pizza_name_list:
+        print("\n\n\Invalid input. Please enter a valid option from the menu. '\n\n\t\tOr enter \'exit\' to exit the console'")   
+  
+    else:
+        print('\nYou have entered {}'.format(get_user_selected_pizza(choice, pizza_menu)))
+        
+        print('\n\t\tEnter \'exit\' to exit the console')
+    
+    
+       
+     
+    
+        
+        
+        
+    
+
+    # if input_op  == "Fungi":
+    #     print('correct getting your informaiton')
+    # else:
+    #     print("Incorrect input, select one from our menu list:")
+
 
 ## write all the else if statements logics here to only vew whats been selected
 
