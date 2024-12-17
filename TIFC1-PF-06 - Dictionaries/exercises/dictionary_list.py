@@ -1,6 +1,4 @@
-
-
-# ['Margarita','peperoni','fungi']
+# Pizza database
 pizza_menu = [
                 {'Margarita':{
                     'name' : 'Margarita',
