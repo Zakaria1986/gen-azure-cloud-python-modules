@@ -2,38 +2,55 @@
 # Classes
 
 
+class PizzaMenuPrompt:
+    def __init__(self, piz_list ='', input ='', pizza_list=''):
+        
+        self.piz_list = piz_list
+        self.input = input
+        self.pizza_list = pizza_list
+        
+    # Get the length of pizza list 
+    def get_total_num_pizz(self):
+        self.total_item = len(self.piz_list)
+        return self.total_item
 
-# Get the length of pizza list 
-def get_total_num_pizz(piz_list):
-    total_item = len(piz_list)
-    return total_item
-
-# Get value by users selection
-def get_user_selected_pizza(input, pizza_list):
-    ## Use it if statement to match the names
-    output = ''
+    # Get value by users selection
     
-    for piz in pizza_list:
-        for key, val in piz.items():  
-            toppins = ''
-            if val['name'].lower() == input:
-                output += f'Pizza name: {val['name']}, \nSize: {val['size']},\nPrice: £{val['price']},\nToppings:'
-                for index, topins in enumerate(val['toppings']):
-                    toppins += f'\n\t{index} = {topins} ' 
-        output+=toppins
-    return output; 
+    def get_user_selected_pizza(self):
+        ## Use it if statement to match the names
+        self.output = ''
+        
+        for self.piz in self.pizza_list:
+            for key, self.val in self.piz.items():  
+                self.toppins = ''
+                if self.val['name'].lower() == self.input:
+                    self.output += f'Pizza name: {self.val['name']}, \nSize: {self.val['size']},\nPrice: £{self.val['price']},\nToppings:'
+                    for self.index, self.topins in enumerate(self.val['toppings']):
+                        self.toppins += f'\n\t{self.index} = {self.topins} ' 
+            self.output+=self.toppins
+        return self.output;  
 
-# Add a new pizza function
 
+
+# Add a new pizza class
 class AddNewItemToTheList:
     def __init__(self, name, price, size, toppings, pizza_menu):
-        def add_new_pizza(name, price, size, topppings, pizza_menu):
-            hawaiian_properties =  {
-                'name' : name,
-                'price': price,
-                'size' : size,
-                }
-            hawaiian_properties.update({'toppings': [topppings]})
-            add_pizza =  {name: hawaiian_properties }
-            pizza_menu.append(add_pizza)
+        self.name = name
+        self.price = price
+        self.size = size
+        self.toppings = toppings
+        self.pizza_menu = pizza_menu
+        
+        
+    def add_new_pizza(self):
+        self.hawaiian_properties =  {
+            'name' : self.name,
+            'price': self.price,
+            'size' : self.size,
+            }
+        self.hawaiian_properties.update({'toppings': [self.topppings]})
+        self.add_pizza =  {self.name: self.hawaiian_properties }
+        self.pizza_menu.append(self.add_pizza)
+
+
 

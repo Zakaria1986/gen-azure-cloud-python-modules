@@ -1,7 +1,5 @@
 from dictionary_list import pizza_menu
-from functions import get_total_num_pizz
-from functions import get_user_selected_pizza
-from functions import add_new_pizza
+from my_classes import PizzaMenuPrompt
 
 hawaiian_properties =  {
          'name' : "Hawaiian",
@@ -40,7 +38,9 @@ for piz in pizza:
 ## Functions saved as variable for later use
 
 # Get the length of pizza list 
-totalNum = get_total_num_pizz(pizza)   
+PizzaMenu = PizzaMenuPrompt(pizza)
+
+totalPizza = PizzaMenu.get_total_num_pizz()   
 
 # prompting users to select optons and edit, update and delete item from the lists            
 while True:
@@ -51,7 +51,7 @@ while True:
         break
     elif not user_choice.isdigit() or int(user_choice) > 1: # if the user input is not an intiger or out of select range ask users to select option per instruction
         print("\n\nInvalid input. Please enter a valid option provided.\n\n\t\tOr enter 'exit' to exit the console")
-    else: # else is where the magic happens, checks the users request and gets the data
+    else: # else is where the magic h1appens, checks the users request and gets the data
         if int(user_choice) == 0:
             print('You selected option 2')
         elif int(user_choice) == 1:
@@ -66,6 +66,8 @@ while True:
                 elif not choice.isalpha() or choice not in pizza_name_list:
                     print("\n\nInvalid input. Please enter a valid option from the menu.\n\n\t\tOr enter 'exit' to exit the console")
                 else:
-                    print('\nYou have entered {}'.format(get_user_selected_pizza(choice, pizza_menu)))
-                    print('\nTotal number of pizzas available: ', totalNum)
+                    pizzaChoice = PizzaMenuPrompt('',choice,pizza_menu)
+                    user_choice =pizzaChoice.get_user_selected_pizza()
+                    print('\nYou have entered {}'.format(user_choice))
+                    print('\nTotal number of pizzas available: ', totalPizza)
                     print('\n\t\tEnter \'exit\' to exit the console')
