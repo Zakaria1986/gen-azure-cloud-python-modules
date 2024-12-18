@@ -41,20 +41,21 @@ for piz in pizza:
 
 # Get the length of pizza list 
 totalNum = get_total_num_pizz(pizza)   
-           
+
+# prompting users to select optons and edit, update and delete item from the lists            
 while True:
     user_option = input('Select an option from the list:  "Add new item enter: 0.", "To view menu enter: 1."')
     user_choice = user_option.strip()
     
-    if user_choice == 'exit':
+    if user_choice == 'exit': # Exit if user decides to exit the code
         break
-    elif not user_choice.isdigit() or int(user_choice) > 1:
+    elif not user_choice.isdigit() or int(user_choice) > 1: # if the user input is not an intiger or out of select range ask users to select option per instruction
         print("\n\nInvalid input. Please enter a valid option provided.\n\n\t\tOr enter 'exit' to exit the console")
-    else:
+    else: # else is where the magic happens, checks the users request and gets the data
         if int(user_choice) == 0:
             print('You selected option 2')
         elif int(user_choice) == 1:
-            while True:
+            while True: # based on users input an infinate loop starts and based on the input code either exits or fetches. 
                 select_option_prompt = input(f'\nPlease select the pizza from the following list: "{pizza_name}"? ')
                 input_entry_to_lower = select_option_prompt.lower()
                 choice = input_entry_to_lower.strip()
