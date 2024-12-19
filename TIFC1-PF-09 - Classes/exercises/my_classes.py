@@ -34,23 +34,35 @@ class PizzaMenuPrompt:
 
 # Add a new pizza class
 class AddNewItemToTheList:
-    def __init__(self, name, price, size, toppings, pizza_menu):
+    def __init__(self, name, price, size, toppings, pizza):
         self.name = name
         self.price = price
         self.size = size
         self.toppings = toppings
-        self.pizza_menu = pizza_menu
+        self.pizza = pizza
         
         
     def add_new_pizza(self):
-        self.hawaiian_properties =  {
-            'name' : self.name,
-            'price': self.price,
-            'size' : self.size,
-            }
-        self.hawaiian_properties.update({'toppings': [self.topppings]})
-        self.add_pizza =  {self.name: self.hawaiian_properties }
-        self.pizza_menu.append(self.add_pizza)
+        
+        self.addnNewPizza =  {
+        'name' : self.name.title(),
+        'price': float(self.price),
+        'size' : f'{self.size} inch',
+        'toppings':  self.toppings
+        }
+        print(self.addnNewPizza)
+        addPizza =  {self.name: self.addnNewPizza}
+        self.pizza.append(addPizza)
+        print(len(self.pizza))
 
+
+class UserInputAndValidations:
+
+    def user_in_put(self, pizza_name):
+        self.pizza_name = pizza_name
+        select_option_prompt = input(f'\nPlease select the pizza from the following list: "{pizza_name}"? ')
+        input_entry_to_lower = select_option_prompt.lower()
+        choice = input_entry_to_lower.strip()
+        return choice
 
 
